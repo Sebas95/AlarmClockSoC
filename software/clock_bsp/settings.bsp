@@ -2,10 +2,10 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>Oct 12, 2017 1:45:31 PM</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1507837531798</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>Oct 12, 2017 2:13:12 PM</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1507839192763</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>/home/sebastian95/Documents/GitHub/AlarmClockSoC/software/clock_bsp</BspGeneratedLocation>
-        <BspSettingsFile>./settings.bsp</BspSettingsFile>
+        <BspSettingsFile>settings.bsp</BspSettingsFile>
         <SopcDesignFile>../../onchipAlarm.sopcinfo</SopcDesignFile>
         <JdiFile>default</JdiFile>
         <Cpu>nios2_gen2_0</Cpu>
@@ -905,14 +905,20 @@
                 <attributes>memory</attributes>
         </MemoryMap>
         <MemoryMap>
+                <slaveDescriptor>timer_0</slaveDescriptor>
+                <addressRange>0x00009000 - 0x0000901F</addressRange>
+                <addressSpan>32</addressSpan>
+                <attributes>timer</attributes>
+        </MemoryMap>
+        <MemoryMap>
                 <slaveDescriptor>led</slaveDescriptor>
-                <addressRange>0x00009000 - 0x0000900F</addressRange>
+                <addressRange>0x00009020 - 0x0000902F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>jtag_uart_0</slaveDescriptor>
-                <addressRange>0x00009010 - 0x00009017</addressRange>
+                <addressRange>0x00009030 - 0x00009037</addressRange>
                 <addressSpan>8</addressSpan>
                 <attributes>printable</attributes>
         </MemoryMap>

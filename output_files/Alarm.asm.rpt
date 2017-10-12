@@ -1,5 +1,5 @@
 Assembler report for Alarm
-Thu Oct 12 13:38:43 2017
+Thu Oct 12 14:10:50 2017
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -39,7 +39,7 @@ agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Thu Oct 12 13:38:43 2017 ;
+; Assembler Status      ; Successful - Thu Oct 12 14:10:50 2017 ;
 ; Revision Name         ; Alarm                                 ;
 ; Top-level Entity Name ; onchipAlarm                           ;
 ; Family                ; Cyclone V                             ;
@@ -79,8 +79,8 @@ agreement for further details.
 ; Option         ; Setting            ;
 +----------------+--------------------+
 ; Device         ; 5CSEMA5F31C6       ;
-; JTAG usercode  ; 0x01322906         ;
-; Checksum       ; 0x01322906         ;
+; JTAG usercode  ; 0x01357137         ;
+; Checksum       ; 0x01357137         ;
 +----------------+--------------------+
 
 
@@ -90,14 +90,14 @@ agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
-    Info: Processing started: Thu Oct 12 13:38:13 2017
+    Info: Processing started: Thu Oct 12 14:10:27 2017
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off Alarm -c Alarm
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 994 megabytes
-    Info: Processing ended: Thu Oct 12 13:38:43 2017
-    Info: Elapsed time: 00:00:30
-    Info: Total CPU time (on all processors): 00:00:11
+    Info: Peak virtual memory: 993 megabytes
+    Info: Processing ended: Thu Oct 12 14:10:50 2017
+    Info: Elapsed time: 00:00:23
+    Info: Total CPU time (on all processors): 00:00:10
 
 

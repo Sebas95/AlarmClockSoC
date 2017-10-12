@@ -79,13 +79,61 @@
  */
 
 #include "sys/alt_stdio.h"
+#include "system.h"
+#import <stdio.h>
+#include <stdlib.h>
+
+#define TimerStatus ((volatile short*) (TIMER_0_BASE))
+#define TimerControl ((volatile short*) (TIMER_0_BASE+4))
+#define TimerTimeoutL ((volatile short*) (TIMER_0_BASE+8))
+#define TimerTimeoutH ((volatile short*) (TIMER_0_BASE+12))
+#define TimerSnapshotL ((volatile short*) (TIMER_0_BASE+16))
+#define TimerSnapshotH ((volatile short*) (TIMER_0_BASE+20))
+
+
+unsigned long numclks,seconds,minutes;
+unsigned long numchigh,numclow;
 
 int main()
 { 
   alt_putstr("Hello from Nios II!\n");
 
-  /* Event loop never exits. */
-  while (1);
+
+
+     // Configure the timeout period to maximum
+     *(TimerTimeoutL)=0xffff;
+     *(TimerTimeoutH)=0xffff;
+     // Configure timer to start counting and stop in cero
+     *(TimerControl)=4;
+     //*(TimerControl)=2;
+     int* led = LED_BASE;
+     while (1)
+     {
+        *(TimerSnapshotL)=0; //write to timer to get snapshot
+        numclow = *(TimerSnapshotL); //get low part
+        numchigh = *(TimerSnapshotH); //get high part
+        numclks = numclow | (numchigh << 16); //assemble full number
+        seconds = numclks/50000000 ;
+
+        minutes = seconds/60;
+        seconds = seconds-minutes*60;
+        if(*(TimerStatus)==2 &  seconds != 25 ) //corriendo, (RUN && !STOP)
+        {
+        	printf("Minutes %lu :  seconds %lu   \n", minutes,seconds);
+        	*led = 0;
+        	//*(TimerControl)=8;
+        }
+        if(*(TimerStatus)==1) //reached to 0 and stopped (!RUN && STOP)
+        {
+
+        	printf("Estado :%d \n", *(TimerStatus));
+            printf("%lu  : \n", numclks);
+            *led = 1;
+            //*(TimerControl)=8; //stop timer
+         }
+
+
+     }
 
   return 0;
 }
