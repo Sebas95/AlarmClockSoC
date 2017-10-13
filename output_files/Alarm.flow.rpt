@@ -1,5 +1,5 @@
 Flow report for Alarm
-Thu Oct 12 14:11:15 2017
+Fri Oct 13 09:19:32 2017
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -41,16 +41,16 @@ agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Thu Oct 12 14:11:15 2017       ;
+; Flow Status                     ; Successful - Fri Oct 13 09:19:32 2017       ;
 ; Quartus Prime Version           ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
 ; Revision Name                   ; Alarm                                       ;
 ; Top-level Entity Name           ; onchipAlarm                                 ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CSEMA5F31C6                                ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 772 / 32,070 ( 2 % )                        ;
-; Total registers                 ; 1090                                        ;
-; Total pins                      ; 3 / 457 ( < 1 % )                           ;
+; Logic utilization (in ALMs)     ; 838 / 32,070 ( 3 % )                        ;
+; Total registers                 ; 1232                                        ;
+; Total pins                      ; 50 / 457 ( 11 % )                           ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 142,336 / 4,065,280 ( 4 % )                 ;
 ; Total DSP Blocks                ; 0 / 87 ( 0 % )                              ;
@@ -68,7 +68,7 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 10/12/2017 14:06:54 ;
+; Start date & time ; 10/13/2017 09:14:59 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Alarm               ;
 +-------------------+---------------------+
@@ -79,7 +79,7 @@ agreement for further details.
 +-------------------------------------+---------------------------------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                                         ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+---------------------------------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 92587420400369.150783881318212                                ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 92587420400369.150790769905870                                ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                                                   ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)                                     ; <None>        ; --          ; --             ;
 ; EDA_TIME_SCALE                      ; 1 ps                                                          ; --            ; --          ; eda_simulation ;
@@ -95,7 +95,7 @@ agreement for further details.
 ; PROJECT_OUTPUT_DIRECTORY            ; output_files                                                  ; --            ; --          ; --             ;
 ; SLD_FILE                            ; onchipAlarm/synthesis/onchipAlarm.regmap                      ; --            ; --          ; --             ;
 ; SLD_FILE                            ; onchipAlarm/synthesis/onchipAlarm.debuginfo                   ; --            ; --          ; --             ;
-; SLD_INFO                            ; QSYS_NAME onchipAlarm HAS_SOPCINFO 1 GENERATION_ID 1507838578 ; --            ; onchipAlarm ; --             ;
+; SLD_INFO                            ; QSYS_NAME onchipAlarm HAS_SOPCINFO 1 GENERATION_ID 1507906732 ; --            ; onchipAlarm ; --             ;
 ; SOPCINFO_FILE                       ; onchipAlarm/synthesis/../../onchipAlarm.sopcinfo              ; --            ; --          ; --             ;
 ; SYNTHESIS_ONLY_QIP                  ; On                                                            ; --            ; --          ; --             ;
 ; TOP_LEVEL_ENTITY                    ; onchipAlarm                                                   ; Alarm         ; --          ; --             ;
@@ -107,12 +107,12 @@ agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:56     ; 1.0                     ; 1150 MB             ; 00:01:26                           ;
-; Fitter                    ; 00:02:02     ; 1.0                     ; 2165 MB             ; 00:03:05                           ;
-; Assembler                 ; 00:00:23     ; 1.0                     ; 993 MB              ; 00:00:10                           ;
-; TimeQuest Timing Analyzer ; 00:00:16     ; 1.3                     ; 1238 MB             ; 00:00:15                           ;
-; EDA Netlist Writer        ; 00:00:04     ; 1.0                     ; 1178 MB             ; 00:00:03                           ;
-; Total                     ; 00:03:41     ; --                      ; --                  ; 00:04:59                           ;
+; Analysis & Synthesis      ; 00:00:47     ; 1.0                     ; 1179 MB             ; 00:01:31                           ;
+; Fitter                    ; 00:02:19     ; 1.1                     ; 2159 MB             ; 00:03:26                           ;
+; Assembler                 ; 00:00:26     ; 1.0                     ; 990 MB              ; 00:00:10                           ;
+; TimeQuest Timing Analyzer ; 00:00:22     ; 1.3                     ; 1242 MB             ; 00:00:21                           ;
+; EDA Netlist Writer        ; 00:00:04     ; 1.0                     ; 1187 MB             ; 00:00:03                           ;
+; Total                     ; 00:03:58     ; --                      ; --                  ; 00:05:31                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

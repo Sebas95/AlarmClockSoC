@@ -17,6 +17,38 @@
          type = "int";
       }
    }
+   element horas_d
+   {
+      datum _sortIndex
+      {
+         value = "8";
+         type = "int";
+      }
+   }
+   element horas_d.s1
+   {
+      datum baseAddress
+      {
+         value = "36976";
+         type = "String";
+      }
+   }
+   element horas_u
+   {
+      datum _sortIndex
+      {
+         value = "9";
+         type = "int";
+      }
+   }
+   element horas_u.s1
+   {
+      datum baseAddress
+      {
+         value = "36960";
+         type = "String";
+      }
+   }
    element jtag_uart_0
    {
       datum _sortIndex
@@ -29,7 +61,7 @@
    {
       datum baseAddress
       {
-         value = "36912";
+         value = "37040";
          type = "String";
       }
    }
@@ -45,7 +77,55 @@
    {
       datum baseAddress
       {
-         value = "36896";
+         value = "37024";
+         type = "String";
+      }
+   }
+   element minutos_d
+   {
+      datum _sortIndex
+      {
+         value = "10";
+         type = "int";
+      }
+   }
+   element minutos_d.s1
+   {
+      datum baseAddress
+      {
+         value = "36944";
+         type = "String";
+      }
+   }
+   element minutos_u
+   {
+      datum _sortIndex
+      {
+         value = "11";
+         type = "int";
+      }
+   }
+   element minutos_u.s1
+   {
+      datum baseAddress
+      {
+         value = "36928";
+         type = "String";
+      }
+   }
+   element modo
+   {
+      datum _sortIndex
+      {
+         value = "7";
+         type = "int";
+      }
+   }
+   element modo.s1
+   {
+      datum baseAddress
+      {
+         value = "36992";
          type = "String";
       }
    }
@@ -78,6 +158,54 @@
       datum baseAddress
       {
          value = "16384";
+         type = "String";
+      }
+   }
+   element push_buttons
+   {
+      datum _sortIndex
+      {
+         value = "6";
+         type = "int";
+      }
+   }
+   element push_buttons.s1
+   {
+      datum baseAddress
+      {
+         value = "37008";
+         type = "String";
+      }
+   }
+   element segundos_d
+   {
+      datum _sortIndex
+      {
+         value = "12";
+         type = "int";
+      }
+   }
+   element segundos_d.s1
+   {
+      datum baseAddress
+      {
+         value = "36896";
+         type = "String";
+      }
+   }
+   element segundos_u
+   {
+      datum _sortIndex
+      {
+         value = "13";
+         type = "int";
+      }
+   }
+   element segundos_u.s1
+   {
+      datum baseAddress
+      {
+         value = "36912";
          type = "String";
       }
    }
@@ -120,16 +248,84 @@
  <instanceScript></instanceScript>
  <interface name="clk" internal="clk_0.clk_in" type="clock" dir="end" />
  <interface
+   name="horas_d"
+   internal="horas_d.external_connection"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="horas_u"
+   internal="horas_u.external_connection"
+   type="conduit"
+   dir="end" />
+ <interface
    name="led"
    internal="led.external_connection"
    type="conduit"
    dir="end" />
+ <interface
+   name="minutos_d"
+   internal="minutos_d.external_connection"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="minutos_u"
+   internal="minutos_u.external_connection"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="modo"
+   internal="modo.external_connection"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="push_buttons"
+   internal="push_buttons.external_connection"
+   type="conduit"
+   dir="end" />
  <interface name="reset" internal="clk_0.clk_in_reset" type="reset" dir="end" />
+ <interface
+   name="segundos_d"
+   internal="segundos_d.external_connection"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="segundos_u"
+   internal="segundos_u.external_connection"
+   type="conduit"
+   dir="end" />
  <module name="clk_0" kind="clock_source" version="16.1" enabled="1">
   <parameter name="clockFrequency" value="50000000" />
   <parameter name="clockFrequencyKnown" value="true" />
   <parameter name="inputClockFrequency" value="0" />
   <parameter name="resetSynchronousEdges" value="NONE" />
+ </module>
+ <module name="horas_d" kind="altera_avalon_pio" version="16.1" enabled="1">
+  <parameter name="bitClearingEdgeCapReg" value="false" />
+  <parameter name="bitModifyingOutReg" value="false" />
+  <parameter name="captureEdge" value="false" />
+  <parameter name="clockRate" value="50000000" />
+  <parameter name="direction" value="Output" />
+  <parameter name="edgeType" value="RISING" />
+  <parameter name="generateIRQ" value="false" />
+  <parameter name="irqType" value="LEVEL" />
+  <parameter name="resetValue" value="0" />
+  <parameter name="simDoTestBenchWiring" value="false" />
+  <parameter name="simDrivenValue" value="0" />
+  <parameter name="width" value="7" />
+ </module>
+ <module name="horas_u" kind="altera_avalon_pio" version="16.1" enabled="1">
+  <parameter name="bitClearingEdgeCapReg" value="false" />
+  <parameter name="bitModifyingOutReg" value="false" />
+  <parameter name="captureEdge" value="false" />
+  <parameter name="clockRate" value="50000000" />
+  <parameter name="direction" value="Output" />
+  <parameter name="edgeType" value="RISING" />
+  <parameter name="generateIRQ" value="false" />
+  <parameter name="irqType" value="LEVEL" />
+  <parameter name="resetValue" value="0" />
+  <parameter name="simDoTestBenchWiring" value="false" />
+  <parameter name="simDrivenValue" value="0" />
+  <parameter name="width" value="7" />
  </module>
  <module
    name="jtag_uart_0"
@@ -164,6 +360,48 @@
   <parameter name="simDrivenValue" value="0" />
   <parameter name="width" value="1" />
  </module>
+ <module name="minutos_d" kind="altera_avalon_pio" version="16.1" enabled="1">
+  <parameter name="bitClearingEdgeCapReg" value="false" />
+  <parameter name="bitModifyingOutReg" value="false" />
+  <parameter name="captureEdge" value="false" />
+  <parameter name="clockRate" value="50000000" />
+  <parameter name="direction" value="Output" />
+  <parameter name="edgeType" value="RISING" />
+  <parameter name="generateIRQ" value="false" />
+  <parameter name="irqType" value="LEVEL" />
+  <parameter name="resetValue" value="0" />
+  <parameter name="simDoTestBenchWiring" value="false" />
+  <parameter name="simDrivenValue" value="0" />
+  <parameter name="width" value="7" />
+ </module>
+ <module name="minutos_u" kind="altera_avalon_pio" version="16.1" enabled="1">
+  <parameter name="bitClearingEdgeCapReg" value="false" />
+  <parameter name="bitModifyingOutReg" value="false" />
+  <parameter name="captureEdge" value="false" />
+  <parameter name="clockRate" value="50000000" />
+  <parameter name="direction" value="Output" />
+  <parameter name="edgeType" value="RISING" />
+  <parameter name="generateIRQ" value="false" />
+  <parameter name="irqType" value="LEVEL" />
+  <parameter name="resetValue" value="0" />
+  <parameter name="simDoTestBenchWiring" value="false" />
+  <parameter name="simDrivenValue" value="0" />
+  <parameter name="width" value="7" />
+ </module>
+ <module name="modo" kind="altera_avalon_pio" version="16.1" enabled="1">
+  <parameter name="bitClearingEdgeCapReg" value="false" />
+  <parameter name="bitModifyingOutReg" value="false" />
+  <parameter name="captureEdge" value="false" />
+  <parameter name="clockRate" value="50000000" />
+  <parameter name="direction" value="Input" />
+  <parameter name="edgeType" value="RISING" />
+  <parameter name="generateIRQ" value="false" />
+  <parameter name="irqType" value="LEVEL" />
+  <parameter name="resetValue" value="0" />
+  <parameter name="simDoTestBenchWiring" value="false" />
+  <parameter name="simDrivenValue" value="0" />
+  <parameter name="width" value="1" />
+ </module>
  <module
    name="nios2_gen2_0"
    kind="altera_nios2_gen2"
@@ -188,7 +426,7 @@
   <parameter name="dataAddrWidth" value="16" />
   <parameter name="dataMasterHighPerformanceAddrWidth" value="1" />
   <parameter name="dataMasterHighPerformanceMapParam" value="" />
-  <parameter name="dataSlaveMapParam"><![CDATA[<address-map><slave name='onchip_memory2_0.s1' start='0x4000' end='0x8000' type='altera_avalon_onchip_memory2.s1' /><slave name='nios2_gen2_0.debug_mem_slave' start='0x8800' end='0x9000' type='altera_nios2_gen2.debug_mem_slave' /><slave name='timer_0.s1' start='0x9000' end='0x9020' type='altera_avalon_timer.s1' /><slave name='led.s1' start='0x9020' end='0x9030' type='altera_avalon_pio.s1' /><slave name='jtag_uart_0.avalon_jtag_slave' start='0x9030' end='0x9038' type='altera_avalon_jtag_uart.avalon_jtag_slave' /></address-map>]]></parameter>
+  <parameter name="dataSlaveMapParam"><![CDATA[<address-map><slave name='onchip_memory2_0.s1' start='0x4000' end='0x8000' type='altera_avalon_onchip_memory2.s1' /><slave name='nios2_gen2_0.debug_mem_slave' start='0x8800' end='0x9000' type='altera_nios2_gen2.debug_mem_slave' /><slave name='timer_0.s1' start='0x9000' end='0x9020' type='altera_avalon_timer.s1' /><slave name='segundos_d.s1' start='0x9020' end='0x9030' type='altera_avalon_pio.s1' /><slave name='segundos_u.s1' start='0x9030' end='0x9040' type='altera_avalon_pio.s1' /><slave name='minutos_u.s1' start='0x9040' end='0x9050' type='altera_avalon_pio.s1' /><slave name='minutos_d.s1' start='0x9050' end='0x9060' type='altera_avalon_pio.s1' /><slave name='horas_u.s1' start='0x9060' end='0x9070' type='altera_avalon_pio.s1' /><slave name='horas_d.s1' start='0x9070' end='0x9080' type='altera_avalon_pio.s1' /><slave name='modo.s1' start='0x9080' end='0x9090' type='altera_avalon_pio.s1' /><slave name='push_buttons.s1' start='0x9090' end='0x90A0' type='altera_avalon_pio.s1' /><slave name='led.s1' start='0x90A0' end='0x90B0' type='altera_avalon_pio.s1' /><slave name='jtag_uart_0.avalon_jtag_slave' start='0x90B0' end='0x90B8' type='altera_avalon_jtag_uart.avalon_jtag_slave' /></address-map>]]></parameter>
   <parameter name="data_master_high_performance_paddr_base" value="0" />
   <parameter name="data_master_high_performance_paddr_size" value="0" />
   <parameter name="data_master_paddr_base" value="0" />
@@ -378,6 +616,52 @@
   <parameter name="useShallowMemBlocks" value="false" />
   <parameter name="writable" value="true" />
  </module>
+ <module
+   name="push_buttons"
+   kind="altera_avalon_pio"
+   version="16.1"
+   enabled="1">
+  <parameter name="bitClearingEdgeCapReg" value="false" />
+  <parameter name="bitModifyingOutReg" value="false" />
+  <parameter name="captureEdge" value="false" />
+  <parameter name="clockRate" value="50000000" />
+  <parameter name="direction" value="Input" />
+  <parameter name="edgeType" value="RISING" />
+  <parameter name="generateIRQ" value="false" />
+  <parameter name="irqType" value="LEVEL" />
+  <parameter name="resetValue" value="0" />
+  <parameter name="simDoTestBenchWiring" value="false" />
+  <parameter name="simDrivenValue" value="0" />
+  <parameter name="width" value="4" />
+ </module>
+ <module name="segundos_d" kind="altera_avalon_pio" version="16.1" enabled="1">
+  <parameter name="bitClearingEdgeCapReg" value="false" />
+  <parameter name="bitModifyingOutReg" value="false" />
+  <parameter name="captureEdge" value="false" />
+  <parameter name="clockRate" value="50000000" />
+  <parameter name="direction" value="Output" />
+  <parameter name="edgeType" value="RISING" />
+  <parameter name="generateIRQ" value="false" />
+  <parameter name="irqType" value="LEVEL" />
+  <parameter name="resetValue" value="0" />
+  <parameter name="simDoTestBenchWiring" value="false" />
+  <parameter name="simDrivenValue" value="0" />
+  <parameter name="width" value="7" />
+ </module>
+ <module name="segundos_u" kind="altera_avalon_pio" version="16.1" enabled="1">
+  <parameter name="bitClearingEdgeCapReg" value="false" />
+  <parameter name="bitModifyingOutReg" value="false" />
+  <parameter name="captureEdge" value="false" />
+  <parameter name="clockRate" value="50000000" />
+  <parameter name="direction" value="Output" />
+  <parameter name="edgeType" value="RISING" />
+  <parameter name="generateIRQ" value="false" />
+  <parameter name="irqType" value="LEVEL" />
+  <parameter name="resetValue" value="0" />
+  <parameter name="simDoTestBenchWiring" value="false" />
+  <parameter name="simDrivenValue" value="0" />
+  <parameter name="width" value="7" />
+ </module>
  <module name="timer_0" kind="altera_avalon_timer" version="16.1" enabled="1">
   <parameter name="alwaysRun" value="false" />
   <parameter name="counterSize" value="32" />
@@ -396,7 +680,7 @@
    start="nios2_gen2_0.data_master"
    end="jtag_uart_0.avalon_jtag_slave">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x9030" />
+  <parameter name="baseAddress" value="0x90b0" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -423,7 +707,7 @@
    start="nios2_gen2_0.data_master"
    end="led.s1">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x9020" />
+  <parameter name="baseAddress" value="0x90a0" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -433,6 +717,78 @@
    end="timer_0.s1">
   <parameter name="arbitrationPriority" value="1" />
   <parameter name="baseAddress" value="0x9000" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="16.1"
+   start="nios2_gen2_0.data_master"
+   end="push_buttons.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x9090" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="16.1"
+   start="nios2_gen2_0.data_master"
+   end="modo.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x9080" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="16.1"
+   start="nios2_gen2_0.data_master"
+   end="horas_d.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x9070" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="16.1"
+   start="nios2_gen2_0.data_master"
+   end="horas_u.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x9060" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="16.1"
+   start="nios2_gen2_0.data_master"
+   end="minutos_d.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x9050" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="16.1"
+   start="nios2_gen2_0.data_master"
+   end="minutos_u.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x9040" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="16.1"
+   start="nios2_gen2_0.data_master"
+   end="segundos_u.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x9030" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="16.1"
+   start="nios2_gen2_0.data_master"
+   end="segundos_d.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x9020" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -457,6 +813,14 @@
  <connection kind="clock" version="16.1" start="clk_0.clk" end="nios2_gen2_0.clk" />
  <connection kind="clock" version="16.1" start="clk_0.clk" end="led.clk" />
  <connection kind="clock" version="16.1" start="clk_0.clk" end="timer_0.clk" />
+ <connection kind="clock" version="16.1" start="clk_0.clk" end="push_buttons.clk" />
+ <connection kind="clock" version="16.1" start="clk_0.clk" end="modo.clk" />
+ <connection kind="clock" version="16.1" start="clk_0.clk" end="horas_d.clk" />
+ <connection kind="clock" version="16.1" start="clk_0.clk" end="minutos_d.clk" />
+ <connection kind="clock" version="16.1" start="clk_0.clk" end="horas_u.clk" />
+ <connection kind="clock" version="16.1" start="clk_0.clk" end="minutos_u.clk" />
+ <connection kind="clock" version="16.1" start="clk_0.clk" end="segundos_u.clk" />
+ <connection kind="clock" version="16.1" start="clk_0.clk" end="segundos_d.clk" />
  <connection
    kind="clock"
    version="16.1"
@@ -492,6 +856,42 @@
    version="16.1"
    start="clk_0.clk_reset"
    end="timer_0.reset" />
+ <connection
+   kind="reset"
+   version="16.1"
+   start="clk_0.clk_reset"
+   end="push_buttons.reset" />
+ <connection kind="reset" version="16.1" start="clk_0.clk_reset" end="modo.reset" />
+ <connection
+   kind="reset"
+   version="16.1"
+   start="clk_0.clk_reset"
+   end="horas_d.reset" />
+ <connection
+   kind="reset"
+   version="16.1"
+   start="clk_0.clk_reset"
+   end="horas_u.reset" />
+ <connection
+   kind="reset"
+   version="16.1"
+   start="clk_0.clk_reset"
+   end="minutos_d.reset" />
+ <connection
+   kind="reset"
+   version="16.1"
+   start="clk_0.clk_reset"
+   end="minutos_u.reset" />
+ <connection
+   kind="reset"
+   version="16.1"
+   start="clk_0.clk_reset"
+   end="segundos_u.reset" />
+ <connection
+   kind="reset"
+   version="16.1"
+   start="clk_0.clk_reset"
+   end="segundos_d.reset" />
  <connection
    kind="reset"
    version="16.1"

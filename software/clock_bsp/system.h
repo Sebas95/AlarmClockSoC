@@ -4,7 +4,7 @@
  * Machine generated for CPU 'nios2_gen2_0' in SOPC Builder design 'onchipAlarm'
  * SOPC Builder design path: ../../onchipAlarm.sopcinfo
  *
- * Generated: Thu Oct 12 14:13:13 CST 2017
+ * Generated: Fri Oct 13 10:06:38 CST 2017
  */
 
 /*
@@ -156,19 +156,19 @@
 #define ALT_NUM_INTERNAL_INTERRUPT_CONTROLLERS 1
 #define ALT_NUM_INTERRUPT_CONTROLLERS 1
 #define ALT_STDERR "/dev/jtag_uart_0"
-#define ALT_STDERR_BASE 0x9030
+#define ALT_STDERR_BASE 0x90b0
 #define ALT_STDERR_DEV jtag_uart_0
 #define ALT_STDERR_IS_JTAG_UART
 #define ALT_STDERR_PRESENT
 #define ALT_STDERR_TYPE "altera_avalon_jtag_uart"
 #define ALT_STDIN "/dev/jtag_uart_0"
-#define ALT_STDIN_BASE 0x9030
+#define ALT_STDIN_BASE 0x90b0
 #define ALT_STDIN_DEV jtag_uart_0
 #define ALT_STDIN_IS_JTAG_UART
 #define ALT_STDIN_PRESENT
 #define ALT_STDIN_TYPE "altera_avalon_jtag_uart"
 #define ALT_STDOUT "/dev/jtag_uart_0"
-#define ALT_STDOUT_BASE 0x9030
+#define ALT_STDOUT_BASE 0x90b0
 #define ALT_STDOUT_DEV jtag_uart_0
 #define ALT_STDOUT_IS_JTAG_UART
 #define ALT_STDOUT_PRESENT
@@ -188,12 +188,66 @@
 
 
 /*
+ * horas_d configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_horas_d altera_avalon_pio
+#define HORAS_D_BASE 0x9070
+#define HORAS_D_BIT_CLEARING_EDGE_REGISTER 0
+#define HORAS_D_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define HORAS_D_CAPTURE 0
+#define HORAS_D_DATA_WIDTH 7
+#define HORAS_D_DO_TEST_BENCH_WIRING 0
+#define HORAS_D_DRIVEN_SIM_VALUE 0
+#define HORAS_D_EDGE_TYPE "NONE"
+#define HORAS_D_FREQ 50000000
+#define HORAS_D_HAS_IN 0
+#define HORAS_D_HAS_OUT 1
+#define HORAS_D_HAS_TRI 0
+#define HORAS_D_IRQ -1
+#define HORAS_D_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define HORAS_D_IRQ_TYPE "NONE"
+#define HORAS_D_NAME "/dev/horas_d"
+#define HORAS_D_RESET_VALUE 0
+#define HORAS_D_SPAN 16
+#define HORAS_D_TYPE "altera_avalon_pio"
+
+
+/*
+ * horas_u configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_horas_u altera_avalon_pio
+#define HORAS_U_BASE 0x9060
+#define HORAS_U_BIT_CLEARING_EDGE_REGISTER 0
+#define HORAS_U_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define HORAS_U_CAPTURE 0
+#define HORAS_U_DATA_WIDTH 7
+#define HORAS_U_DO_TEST_BENCH_WIRING 0
+#define HORAS_U_DRIVEN_SIM_VALUE 0
+#define HORAS_U_EDGE_TYPE "NONE"
+#define HORAS_U_FREQ 50000000
+#define HORAS_U_HAS_IN 0
+#define HORAS_U_HAS_OUT 1
+#define HORAS_U_HAS_TRI 0
+#define HORAS_U_IRQ -1
+#define HORAS_U_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define HORAS_U_IRQ_TYPE "NONE"
+#define HORAS_U_NAME "/dev/horas_u"
+#define HORAS_U_RESET_VALUE 0
+#define HORAS_U_SPAN 16
+#define HORAS_U_TYPE "altera_avalon_pio"
+
+
+/*
  * jtag_uart_0 configuration
  *
  */
 
 #define ALT_MODULE_CLASS_jtag_uart_0 altera_avalon_jtag_uart
-#define JTAG_UART_0_BASE 0x9030
+#define JTAG_UART_0_BASE 0x90b0
 #define JTAG_UART_0_IRQ 0
 #define JTAG_UART_0_IRQ_INTERRUPT_CONTROLLER_ID 0
 #define JTAG_UART_0_NAME "/dev/jtag_uart_0"
@@ -211,7 +265,7 @@
  */
 
 #define ALT_MODULE_CLASS_led altera_avalon_pio
-#define LED_BASE 0x9020
+#define LED_BASE 0x90a0
 #define LED_BIT_CLEARING_EDGE_REGISTER 0
 #define LED_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define LED_CAPTURE 0
@@ -230,6 +284,87 @@
 #define LED_RESET_VALUE 0
 #define LED_SPAN 16
 #define LED_TYPE "altera_avalon_pio"
+
+
+/*
+ * minutos_d configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_minutos_d altera_avalon_pio
+#define MINUTOS_D_BASE 0x9050
+#define MINUTOS_D_BIT_CLEARING_EDGE_REGISTER 0
+#define MINUTOS_D_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define MINUTOS_D_CAPTURE 0
+#define MINUTOS_D_DATA_WIDTH 7
+#define MINUTOS_D_DO_TEST_BENCH_WIRING 0
+#define MINUTOS_D_DRIVEN_SIM_VALUE 0
+#define MINUTOS_D_EDGE_TYPE "NONE"
+#define MINUTOS_D_FREQ 50000000
+#define MINUTOS_D_HAS_IN 0
+#define MINUTOS_D_HAS_OUT 1
+#define MINUTOS_D_HAS_TRI 0
+#define MINUTOS_D_IRQ -1
+#define MINUTOS_D_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define MINUTOS_D_IRQ_TYPE "NONE"
+#define MINUTOS_D_NAME "/dev/minutos_d"
+#define MINUTOS_D_RESET_VALUE 0
+#define MINUTOS_D_SPAN 16
+#define MINUTOS_D_TYPE "altera_avalon_pio"
+
+
+/*
+ * minutos_u configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_minutos_u altera_avalon_pio
+#define MINUTOS_U_BASE 0x9040
+#define MINUTOS_U_BIT_CLEARING_EDGE_REGISTER 0
+#define MINUTOS_U_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define MINUTOS_U_CAPTURE 0
+#define MINUTOS_U_DATA_WIDTH 7
+#define MINUTOS_U_DO_TEST_BENCH_WIRING 0
+#define MINUTOS_U_DRIVEN_SIM_VALUE 0
+#define MINUTOS_U_EDGE_TYPE "NONE"
+#define MINUTOS_U_FREQ 50000000
+#define MINUTOS_U_HAS_IN 0
+#define MINUTOS_U_HAS_OUT 1
+#define MINUTOS_U_HAS_TRI 0
+#define MINUTOS_U_IRQ -1
+#define MINUTOS_U_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define MINUTOS_U_IRQ_TYPE "NONE"
+#define MINUTOS_U_NAME "/dev/minutos_u"
+#define MINUTOS_U_RESET_VALUE 0
+#define MINUTOS_U_SPAN 16
+#define MINUTOS_U_TYPE "altera_avalon_pio"
+
+
+/*
+ * modo configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_modo altera_avalon_pio
+#define MODO_BASE 0x9080
+#define MODO_BIT_CLEARING_EDGE_REGISTER 0
+#define MODO_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define MODO_CAPTURE 0
+#define MODO_DATA_WIDTH 1
+#define MODO_DO_TEST_BENCH_WIRING 0
+#define MODO_DRIVEN_SIM_VALUE 0
+#define MODO_EDGE_TYPE "NONE"
+#define MODO_FREQ 50000000
+#define MODO_HAS_IN 1
+#define MODO_HAS_OUT 0
+#define MODO_HAS_TRI 0
+#define MODO_IRQ -1
+#define MODO_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define MODO_IRQ_TYPE "NONE"
+#define MODO_NAME "/dev/modo"
+#define MODO_RESET_VALUE 0
+#define MODO_SPAN 16
+#define MODO_TYPE "altera_avalon_pio"
 
 
 /*
@@ -259,6 +394,87 @@
 #define ONCHIP_MEMORY2_0_SPAN 16384
 #define ONCHIP_MEMORY2_0_TYPE "altera_avalon_onchip_memory2"
 #define ONCHIP_MEMORY2_0_WRITABLE 1
+
+
+/*
+ * push_buttons configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_push_buttons altera_avalon_pio
+#define PUSH_BUTTONS_BASE 0x9090
+#define PUSH_BUTTONS_BIT_CLEARING_EDGE_REGISTER 0
+#define PUSH_BUTTONS_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define PUSH_BUTTONS_CAPTURE 0
+#define PUSH_BUTTONS_DATA_WIDTH 4
+#define PUSH_BUTTONS_DO_TEST_BENCH_WIRING 0
+#define PUSH_BUTTONS_DRIVEN_SIM_VALUE 0
+#define PUSH_BUTTONS_EDGE_TYPE "NONE"
+#define PUSH_BUTTONS_FREQ 50000000
+#define PUSH_BUTTONS_HAS_IN 1
+#define PUSH_BUTTONS_HAS_OUT 0
+#define PUSH_BUTTONS_HAS_TRI 0
+#define PUSH_BUTTONS_IRQ -1
+#define PUSH_BUTTONS_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define PUSH_BUTTONS_IRQ_TYPE "NONE"
+#define PUSH_BUTTONS_NAME "/dev/push_buttons"
+#define PUSH_BUTTONS_RESET_VALUE 0
+#define PUSH_BUTTONS_SPAN 16
+#define PUSH_BUTTONS_TYPE "altera_avalon_pio"
+
+
+/*
+ * segundos_d configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_segundos_d altera_avalon_pio
+#define SEGUNDOS_D_BASE 0x9020
+#define SEGUNDOS_D_BIT_CLEARING_EDGE_REGISTER 0
+#define SEGUNDOS_D_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define SEGUNDOS_D_CAPTURE 0
+#define SEGUNDOS_D_DATA_WIDTH 7
+#define SEGUNDOS_D_DO_TEST_BENCH_WIRING 0
+#define SEGUNDOS_D_DRIVEN_SIM_VALUE 0
+#define SEGUNDOS_D_EDGE_TYPE "NONE"
+#define SEGUNDOS_D_FREQ 50000000
+#define SEGUNDOS_D_HAS_IN 0
+#define SEGUNDOS_D_HAS_OUT 1
+#define SEGUNDOS_D_HAS_TRI 0
+#define SEGUNDOS_D_IRQ -1
+#define SEGUNDOS_D_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define SEGUNDOS_D_IRQ_TYPE "NONE"
+#define SEGUNDOS_D_NAME "/dev/segundos_d"
+#define SEGUNDOS_D_RESET_VALUE 0
+#define SEGUNDOS_D_SPAN 16
+#define SEGUNDOS_D_TYPE "altera_avalon_pio"
+
+
+/*
+ * segundos_u configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_segundos_u altera_avalon_pio
+#define SEGUNDOS_U_BASE 0x9030
+#define SEGUNDOS_U_BIT_CLEARING_EDGE_REGISTER 0
+#define SEGUNDOS_U_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define SEGUNDOS_U_CAPTURE 0
+#define SEGUNDOS_U_DATA_WIDTH 7
+#define SEGUNDOS_U_DO_TEST_BENCH_WIRING 0
+#define SEGUNDOS_U_DRIVEN_SIM_VALUE 0
+#define SEGUNDOS_U_EDGE_TYPE "NONE"
+#define SEGUNDOS_U_FREQ 50000000
+#define SEGUNDOS_U_HAS_IN 0
+#define SEGUNDOS_U_HAS_OUT 1
+#define SEGUNDOS_U_HAS_TRI 0
+#define SEGUNDOS_U_IRQ -1
+#define SEGUNDOS_U_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define SEGUNDOS_U_IRQ_TYPE "NONE"
+#define SEGUNDOS_U_NAME "/dev/segundos_u"
+#define SEGUNDOS_U_RESET_VALUE 0
+#define SEGUNDOS_U_SPAN 16
+#define SEGUNDOS_U_TYPE "altera_avalon_pio"
 
 
 /*

@@ -2,8 +2,8 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>Oct 12, 2017 2:13:12 PM</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1507839192763</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>Oct 13, 2017 10:06:35 AM</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1507910795905</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>/home/sebastian95/Documents/GitHub/AlarmClockSoC/software/clock_bsp</BspGeneratedLocation>
         <BspSettingsFile>settings.bsp</BspSettingsFile>
         <SopcDesignFile>../../onchipAlarm.sopcinfo</SopcDesignFile>
@@ -911,14 +911,62 @@
                 <attributes>timer</attributes>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>led</slaveDescriptor>
+                <slaveDescriptor>segundos_d</slaveDescriptor>
                 <addressRange>0x00009020 - 0x0000902F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
+                <slaveDescriptor>segundos_u</slaveDescriptor>
+                <addressRange>0x00009030 - 0x0000903F</addressRange>
+                <addressSpan>16</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>minutos_u</slaveDescriptor>
+                <addressRange>0x00009040 - 0x0000904F</addressRange>
+                <addressSpan>16</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>minutos_d</slaveDescriptor>
+                <addressRange>0x00009050 - 0x0000905F</addressRange>
+                <addressSpan>16</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>horas_u</slaveDescriptor>
+                <addressRange>0x00009060 - 0x0000906F</addressRange>
+                <addressSpan>16</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>horas_d</slaveDescriptor>
+                <addressRange>0x00009070 - 0x0000907F</addressRange>
+                <addressSpan>16</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>modo</slaveDescriptor>
+                <addressRange>0x00009080 - 0x0000908F</addressRange>
+                <addressSpan>16</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>push_buttons</slaveDescriptor>
+                <addressRange>0x00009090 - 0x0000909F</addressRange>
+                <addressSpan>16</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>led</slaveDescriptor>
+                <addressRange>0x000090A0 - 0x000090AF</addressRange>
+                <addressSpan>16</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
                 <slaveDescriptor>jtag_uart_0</slaveDescriptor>
-                <addressRange>0x00009030 - 0x00009037</addressRange>
+                <addressRange>0x000090B0 - 0x000090B7</addressRange>
                 <addressSpan>8</addressSpan>
                 <attributes>printable</attributes>
         </MemoryMap>

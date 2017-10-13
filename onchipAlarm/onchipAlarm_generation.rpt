@@ -4,14 +4,30 @@ Progress: Loading AlarmClockSoC/onchipAlarm.qsys
 Progress: Reading input file
 Progress: Adding clk_0 [clock_source 16.1]
 Progress: Parameterizing module clk_0
+Progress: Adding horas_d [altera_avalon_pio 16.1]
+Progress: Parameterizing module horas_d
+Progress: Adding horas_u [altera_avalon_pio 16.1]
+Progress: Parameterizing module horas_u
 Progress: Adding jtag_uart_0 [altera_avalon_jtag_uart 16.1]
 Progress: Parameterizing module jtag_uart_0
 Progress: Adding led [altera_avalon_pio 16.1]
 Progress: Parameterizing module led
+Progress: Adding minutos_d [altera_avalon_pio 16.1]
+Progress: Parameterizing module minutos_d
+Progress: Adding minutos_u [altera_avalon_pio 16.1]
+Progress: Parameterizing module minutos_u
+Progress: Adding modo [altera_avalon_pio 16.1]
+Progress: Parameterizing module modo
 Progress: Adding nios2_gen2_0 [altera_nios2_gen2 16.1]
 Progress: Parameterizing module nios2_gen2_0
 Progress: Adding onchip_memory2_0 [altera_avalon_onchip_memory2 16.1]
 Progress: Parameterizing module onchip_memory2_0
+Progress: Adding push_buttons [altera_avalon_pio 16.1]
+Progress: Parameterizing module push_buttons
+Progress: Adding segundos_d [altera_avalon_pio 16.1]
+Progress: Parameterizing module segundos_d
+Progress: Adding segundos_u [altera_avalon_pio 16.1]
+Progress: Parameterizing module segundos_u
 Progress: Adding timer_0 [altera_avalon_timer 16.1]
 Progress: Parameterizing module timer_0
 Progress: Building connections
@@ -19,6 +35,8 @@ Progress: Parameterizing connections
 Progress: Validating
 Progress: Done reading input file
 Info: onchipAlarm.jtag_uart_0: JTAG UART IP input clock need to be at least double (2x) the operating frequency of JTAG TCK on board
+Info: onchipAlarm.modo: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: onchipAlarm.push_buttons: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
 Info: qsys-generate succeeded.
 Info: Finished: Create block symbol file (.bsf)
 Info: 
@@ -28,14 +46,30 @@ Progress: Loading AlarmClockSoC/onchipAlarm.qsys
 Progress: Reading input file
 Progress: Adding clk_0 [clock_source 16.1]
 Progress: Parameterizing module clk_0
+Progress: Adding horas_d [altera_avalon_pio 16.1]
+Progress: Parameterizing module horas_d
+Progress: Adding horas_u [altera_avalon_pio 16.1]
+Progress: Parameterizing module horas_u
 Progress: Adding jtag_uart_0 [altera_avalon_jtag_uart 16.1]
 Progress: Parameterizing module jtag_uart_0
 Progress: Adding led [altera_avalon_pio 16.1]
 Progress: Parameterizing module led
+Progress: Adding minutos_d [altera_avalon_pio 16.1]
+Progress: Parameterizing module minutos_d
+Progress: Adding minutos_u [altera_avalon_pio 16.1]
+Progress: Parameterizing module minutos_u
+Progress: Adding modo [altera_avalon_pio 16.1]
+Progress: Parameterizing module modo
 Progress: Adding nios2_gen2_0 [altera_nios2_gen2 16.1]
 Progress: Parameterizing module nios2_gen2_0
 Progress: Adding onchip_memory2_0 [altera_avalon_onchip_memory2 16.1]
 Progress: Parameterizing module onchip_memory2_0
+Progress: Adding push_buttons [altera_avalon_pio 16.1]
+Progress: Parameterizing module push_buttons
+Progress: Adding segundos_d [altera_avalon_pio 16.1]
+Progress: Parameterizing module segundos_d
+Progress: Adding segundos_u [altera_avalon_pio 16.1]
+Progress: Parameterizing module segundos_u
 Progress: Adding timer_0 [altera_avalon_timer 16.1]
 Progress: Parameterizing module timer_0
 Progress: Building connections
@@ -43,22 +77,36 @@ Progress: Parameterizing connections
 Progress: Validating
 Progress: Done reading input file
 Info: onchipAlarm.jtag_uart_0: JTAG UART IP input clock need to be at least double (2x) the operating frequency of JTAG TCK on board
+Info: onchipAlarm.modo: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: onchipAlarm.push_buttons: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
 Info: onchipAlarm: Generating onchipAlarm "onchipAlarm" for QUARTUS_SYNTH
+Info: horas_d: Starting RTL generation for module 'onchipAlarm_horas_d'
+Info: horas_d:   Generation command is [exec /home/sebastian95/intelFPGA_lite/16.1/quartus/linux64/perl/bin/perl -I /home/sebastian95/intelFPGA_lite/16.1/quartus/linux64/perl/lib -I /home/sebastian95/intelFPGA_lite/16.1/quartus/sopc_builder/bin/europa -I /home/sebastian95/intelFPGA_lite/16.1/quartus/sopc_builder/bin/perl_lib -I /home/sebastian95/intelFPGA_lite/16.1/quartus/sopc_builder/bin -I /home/sebastian95/intelFPGA_lite/16.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/sebastian95/intelFPGA_lite/16.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- /home/sebastian95/intelFPGA_lite/16.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=onchipAlarm_horas_d --dir=/tmp/alt7452_5811065295402166758.dir/0001_horas_d_gen/ --quartus_dir=/home/sebastian95/intelFPGA_lite/16.1/quartus --verilog --config=/tmp/alt7452_5811065295402166758.dir/0001_horas_d_gen//onchipAlarm_horas_d_component_configuration.pl  --do_build_sim=0  ]
+Info: horas_d: Done RTL generation for module 'onchipAlarm_horas_d'
+Info: horas_d: "onchipAlarm" instantiated altera_avalon_pio "horas_d"
 Info: jtag_uart_0: Starting RTL generation for module 'onchipAlarm_jtag_uart_0'
-Info: jtag_uart_0:   Generation command is [exec /home/sebastian95/intelFPGA_lite/16.1/quartus/linux64/perl/bin/perl -I /home/sebastian95/intelFPGA_lite/16.1/quartus/linux64/perl/lib -I /home/sebastian95/intelFPGA_lite/16.1/quartus/sopc_builder/bin/europa -I /home/sebastian95/intelFPGA_lite/16.1/quartus/sopc_builder/bin/perl_lib -I /home/sebastian95/intelFPGA_lite/16.1/quartus/sopc_builder/bin -I /home/sebastian95/intelFPGA_lite/16.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/sebastian95/intelFPGA_lite/16.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- /home/sebastian95/intelFPGA_lite/16.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=onchipAlarm_jtag_uart_0 --dir=/tmp/alt7451_3733592470554024977.dir/0001_jtag_uart_0_gen/ --quartus_dir=/home/sebastian95/intelFPGA_lite/16.1/quartus --verilog --config=/tmp/alt7451_3733592470554024977.dir/0001_jtag_uart_0_gen//onchipAlarm_jtag_uart_0_component_configuration.pl  --do_build_sim=0  ]
+Info: jtag_uart_0:   Generation command is [exec /home/sebastian95/intelFPGA_lite/16.1/quartus/linux64/perl/bin/perl -I /home/sebastian95/intelFPGA_lite/16.1/quartus/linux64/perl/lib -I /home/sebastian95/intelFPGA_lite/16.1/quartus/sopc_builder/bin/europa -I /home/sebastian95/intelFPGA_lite/16.1/quartus/sopc_builder/bin/perl_lib -I /home/sebastian95/intelFPGA_lite/16.1/quartus/sopc_builder/bin -I /home/sebastian95/intelFPGA_lite/16.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/sebastian95/intelFPGA_lite/16.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- /home/sebastian95/intelFPGA_lite/16.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=onchipAlarm_jtag_uart_0 --dir=/tmp/alt7452_5811065295402166758.dir/0002_jtag_uart_0_gen/ --quartus_dir=/home/sebastian95/intelFPGA_lite/16.1/quartus --verilog --config=/tmp/alt7452_5811065295402166758.dir/0002_jtag_uart_0_gen//onchipAlarm_jtag_uart_0_component_configuration.pl  --do_build_sim=0  ]
 Info: jtag_uart_0: Done RTL generation for module 'onchipAlarm_jtag_uart_0'
 Info: jtag_uart_0: "onchipAlarm" instantiated altera_avalon_jtag_uart "jtag_uart_0"
 Info: led: Starting RTL generation for module 'onchipAlarm_led'
-Info: led:   Generation command is [exec /home/sebastian95/intelFPGA_lite/16.1/quartus/linux64/perl/bin/perl -I /home/sebastian95/intelFPGA_lite/16.1/quartus/linux64/perl/lib -I /home/sebastian95/intelFPGA_lite/16.1/quartus/sopc_builder/bin/europa -I /home/sebastian95/intelFPGA_lite/16.1/quartus/sopc_builder/bin/perl_lib -I /home/sebastian95/intelFPGA_lite/16.1/quartus/sopc_builder/bin -I /home/sebastian95/intelFPGA_lite/16.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/sebastian95/intelFPGA_lite/16.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- /home/sebastian95/intelFPGA_lite/16.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=onchipAlarm_led --dir=/tmp/alt7451_3733592470554024977.dir/0002_led_gen/ --quartus_dir=/home/sebastian95/intelFPGA_lite/16.1/quartus --verilog --config=/tmp/alt7451_3733592470554024977.dir/0002_led_gen//onchipAlarm_led_component_configuration.pl  --do_build_sim=0  ]
+Info: led:   Generation command is [exec /home/sebastian95/intelFPGA_lite/16.1/quartus/linux64/perl/bin/perl -I /home/sebastian95/intelFPGA_lite/16.1/quartus/linux64/perl/lib -I /home/sebastian95/intelFPGA_lite/16.1/quartus/sopc_builder/bin/europa -I /home/sebastian95/intelFPGA_lite/16.1/quartus/sopc_builder/bin/perl_lib -I /home/sebastian95/intelFPGA_lite/16.1/quartus/sopc_builder/bin -I /home/sebastian95/intelFPGA_lite/16.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/sebastian95/intelFPGA_lite/16.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- /home/sebastian95/intelFPGA_lite/16.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=onchipAlarm_led --dir=/tmp/alt7452_5811065295402166758.dir/0003_led_gen/ --quartus_dir=/home/sebastian95/intelFPGA_lite/16.1/quartus --verilog --config=/tmp/alt7452_5811065295402166758.dir/0003_led_gen//onchipAlarm_led_component_configuration.pl  --do_build_sim=0  ]
 Info: led: Done RTL generation for module 'onchipAlarm_led'
 Info: led: "onchipAlarm" instantiated altera_avalon_pio "led"
+Info: modo: Starting RTL generation for module 'onchipAlarm_modo'
+Info: modo:   Generation command is [exec /home/sebastian95/intelFPGA_lite/16.1/quartus/linux64/perl/bin/perl -I /home/sebastian95/intelFPGA_lite/16.1/quartus/linux64/perl/lib -I /home/sebastian95/intelFPGA_lite/16.1/quartus/sopc_builder/bin/europa -I /home/sebastian95/intelFPGA_lite/16.1/quartus/sopc_builder/bin/perl_lib -I /home/sebastian95/intelFPGA_lite/16.1/quartus/sopc_builder/bin -I /home/sebastian95/intelFPGA_lite/16.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/sebastian95/intelFPGA_lite/16.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- /home/sebastian95/intelFPGA_lite/16.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=onchipAlarm_modo --dir=/tmp/alt7452_5811065295402166758.dir/0004_modo_gen/ --quartus_dir=/home/sebastian95/intelFPGA_lite/16.1/quartus --verilog --config=/tmp/alt7452_5811065295402166758.dir/0004_modo_gen//onchipAlarm_modo_component_configuration.pl  --do_build_sim=0  ]
+Info: modo: Done RTL generation for module 'onchipAlarm_modo'
+Info: modo: "onchipAlarm" instantiated altera_avalon_pio "modo"
 Info: nios2_gen2_0: "onchipAlarm" instantiated altera_nios2_gen2 "nios2_gen2_0"
 Info: onchip_memory2_0: Starting RTL generation for module 'onchipAlarm_onchip_memory2_0'
-Info: onchip_memory2_0:   Generation command is [exec /home/sebastian95/intelFPGA_lite/16.1/quartus/linux64/perl/bin/perl -I /home/sebastian95/intelFPGA_lite/16.1/quartus/linux64/perl/lib -I /home/sebastian95/intelFPGA_lite/16.1/quartus/sopc_builder/bin/europa -I /home/sebastian95/intelFPGA_lite/16.1/quartus/sopc_builder/bin/perl_lib -I /home/sebastian95/intelFPGA_lite/16.1/quartus/sopc_builder/bin -I /home/sebastian95/intelFPGA_lite/16.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/sebastian95/intelFPGA_lite/16.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- /home/sebastian95/intelFPGA_lite/16.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=onchipAlarm_onchip_memory2_0 --dir=/tmp/alt7451_3733592470554024977.dir/0003_onchip_memory2_0_gen/ --quartus_dir=/home/sebastian95/intelFPGA_lite/16.1/quartus --verilog --config=/tmp/alt7451_3733592470554024977.dir/0003_onchip_memory2_0_gen//onchipAlarm_onchip_memory2_0_component_configuration.pl  --do_build_sim=0  ]
+Info: onchip_memory2_0:   Generation command is [exec /home/sebastian95/intelFPGA_lite/16.1/quartus/linux64/perl/bin/perl -I /home/sebastian95/intelFPGA_lite/16.1/quartus/linux64/perl/lib -I /home/sebastian95/intelFPGA_lite/16.1/quartus/sopc_builder/bin/europa -I /home/sebastian95/intelFPGA_lite/16.1/quartus/sopc_builder/bin/perl_lib -I /home/sebastian95/intelFPGA_lite/16.1/quartus/sopc_builder/bin -I /home/sebastian95/intelFPGA_lite/16.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/sebastian95/intelFPGA_lite/16.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- /home/sebastian95/intelFPGA_lite/16.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=onchipAlarm_onchip_memory2_0 --dir=/tmp/alt7452_5811065295402166758.dir/0005_onchip_memory2_0_gen/ --quartus_dir=/home/sebastian95/intelFPGA_lite/16.1/quartus --verilog --config=/tmp/alt7452_5811065295402166758.dir/0005_onchip_memory2_0_gen//onchipAlarm_onchip_memory2_0_component_configuration.pl  --do_build_sim=0  ]
 Info: onchip_memory2_0: Done RTL generation for module 'onchipAlarm_onchip_memory2_0'
 Info: onchip_memory2_0: "onchipAlarm" instantiated altera_avalon_onchip_memory2 "onchip_memory2_0"
+Info: push_buttons: Starting RTL generation for module 'onchipAlarm_push_buttons'
+Info: push_buttons:   Generation command is [exec /home/sebastian95/intelFPGA_lite/16.1/quartus/linux64/perl/bin/perl -I /home/sebastian95/intelFPGA_lite/16.1/quartus/linux64/perl/lib -I /home/sebastian95/intelFPGA_lite/16.1/quartus/sopc_builder/bin/europa -I /home/sebastian95/intelFPGA_lite/16.1/quartus/sopc_builder/bin/perl_lib -I /home/sebastian95/intelFPGA_lite/16.1/quartus/sopc_builder/bin -I /home/sebastian95/intelFPGA_lite/16.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/sebastian95/intelFPGA_lite/16.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- /home/sebastian95/intelFPGA_lite/16.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=onchipAlarm_push_buttons --dir=/tmp/alt7452_5811065295402166758.dir/0006_push_buttons_gen/ --quartus_dir=/home/sebastian95/intelFPGA_lite/16.1/quartus --verilog --config=/tmp/alt7452_5811065295402166758.dir/0006_push_buttons_gen//onchipAlarm_push_buttons_component_configuration.pl  --do_build_sim=0  ]
+Info: push_buttons: Done RTL generation for module 'onchipAlarm_push_buttons'
+Info: push_buttons: "onchipAlarm" instantiated altera_avalon_pio "push_buttons"
 Info: timer_0: Starting RTL generation for module 'onchipAlarm_timer_0'
-Info: timer_0:   Generation command is [exec /home/sebastian95/intelFPGA_lite/16.1/quartus/linux64//perl/bin/perl -I /home/sebastian95/intelFPGA_lite/16.1/quartus/linux64//perl/lib -I /home/sebastian95/intelFPGA_lite/16.1/quartus/sopc_builder/bin/europa -I /home/sebastian95/intelFPGA_lite/16.1/quartus/sopc_builder/bin/perl_lib -I /home/sebastian95/intelFPGA_lite/16.1/quartus/sopc_builder/bin -I /home/sebastian95/intelFPGA_lite/16.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/sebastian95/intelFPGA_lite/16.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer -- /home/sebastian95/intelFPGA_lite/16.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer/generate_rtl.pl --name=onchipAlarm_timer_0 --dir=/tmp/alt7451_3733592470554024977.dir/0004_timer_0_gen/ --quartus_dir=/home/sebastian95/intelFPGA_lite/16.1/quartus --verilog --config=/tmp/alt7451_3733592470554024977.dir/0004_timer_0_gen//onchipAlarm_timer_0_component_configuration.pl  --do_build_sim=0  ]
+Info: timer_0:   Generation command is [exec /home/sebastian95/intelFPGA_lite/16.1/quartus/linux64//perl/bin/perl -I /home/sebastian95/intelFPGA_lite/16.1/quartus/linux64//perl/lib -I /home/sebastian95/intelFPGA_lite/16.1/quartus/sopc_builder/bin/europa -I /home/sebastian95/intelFPGA_lite/16.1/quartus/sopc_builder/bin/perl_lib -I /home/sebastian95/intelFPGA_lite/16.1/quartus/sopc_builder/bin -I /home/sebastian95/intelFPGA_lite/16.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/sebastian95/intelFPGA_lite/16.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer -- /home/sebastian95/intelFPGA_lite/16.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer/generate_rtl.pl --name=onchipAlarm_timer_0 --dir=/tmp/alt7452_5811065295402166758.dir/0007_timer_0_gen/ --quartus_dir=/home/sebastian95/intelFPGA_lite/16.1/quartus --verilog --config=/tmp/alt7452_5811065295402166758.dir/0007_timer_0_gen//onchipAlarm_timer_0_component_configuration.pl  --do_build_sim=0  ]
 Info: timer_0: Done RTL generation for module 'onchipAlarm_timer_0'
 Info: timer_0: "onchipAlarm" instantiated altera_avalon_timer "timer_0"
 Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
@@ -66,20 +114,28 @@ Info: avalon_st_adapter_001: Inserting error_adapter: error_adapter_0
 Info: avalon_st_adapter_002: Inserting error_adapter: error_adapter_0
 Info: avalon_st_adapter_003: Inserting error_adapter: error_adapter_0
 Info: avalon_st_adapter_004: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_005: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_006: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_007: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_008: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_009: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_010: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_011: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_012: Inserting error_adapter: error_adapter_0
 Info: mm_interconnect_0: "onchipAlarm" instantiated altera_mm_interconnect "mm_interconnect_0"
 Info: irq_mapper: "onchipAlarm" instantiated altera_irq_mapper "irq_mapper"
 Info: rst_controller: "onchipAlarm" instantiated altera_reset_controller "rst_controller"
 Info: cpu: Starting RTL generation for module 'onchipAlarm_nios2_gen2_0_cpu'
-Info: cpu:   Generation command is [exec /home/sebastian95/intelFPGA_lite/16.1/quartus/linux64//eperlcmd -I /home/sebastian95/intelFPGA_lite/16.1/quartus/linux64//perl/lib -I /home/sebastian95/intelFPGA_lite/16.1/quartus/sopc_builder/bin/europa -I /home/sebastian95/intelFPGA_lite/16.1/quartus/sopc_builder/bin/perl_lib -I /home/sebastian95/intelFPGA_lite/16.1/quartus/sopc_builder/bin -I /home/sebastian95/intelFPGA_lite/16.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I /home/sebastian95/intelFPGA_lite/16.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I /home/sebastian95/intelFPGA_lite/16.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I /home/sebastian95/intelFPGA_lite/16.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- /home/sebastian95/intelFPGA_lite/16.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.epl --name=onchipAlarm_nios2_gen2_0_cpu --dir=/tmp/alt7451_3733592470554024977.dir/0007_cpu_gen/ --quartus_bindir=/home/sebastian95/intelFPGA_lite/16.1/quartus/linux64/ --verilog --config=/tmp/alt7451_3733592470554024977.dir/0007_cpu_gen//onchipAlarm_nios2_gen2_0_cpu_processor_configuration.pl  --do_build_sim=0  ]
-Info: cpu: # 2017.10.12 14:03:08 (*) Starting Nios II generation
-Info: cpu: # 2017.10.12 14:03:08 (*)   Checking for plaintext license.
-Info: cpu: # 2017.10.12 14:03:09 (*)   Plaintext license not found.
-Info: cpu: # 2017.10.12 14:03:09 (*)   No license required to generate encrypted Nios II/e.
-Info: cpu: # 2017.10.12 14:03:09 (*)   Elaborating CPU configuration settings
-Info: cpu: # 2017.10.12 14:03:09 (*)   Creating all objects for CPU
-Info: cpu: # 2017.10.12 14:03:11 (*)   Generating RTL from CPU objects
-Info: cpu: # 2017.10.12 14:03:11 (*)   Creating plain-text RTL
-Info: cpu: # 2017.10.12 14:03:11 (*) Done Nios II generation
+Info: cpu:   Generation command is [exec /home/sebastian95/intelFPGA_lite/16.1/quartus/linux64//eperlcmd -I /home/sebastian95/intelFPGA_lite/16.1/quartus/linux64//perl/lib -I /home/sebastian95/intelFPGA_lite/16.1/quartus/sopc_builder/bin/europa -I /home/sebastian95/intelFPGA_lite/16.1/quartus/sopc_builder/bin/perl_lib -I /home/sebastian95/intelFPGA_lite/16.1/quartus/sopc_builder/bin -I /home/sebastian95/intelFPGA_lite/16.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I /home/sebastian95/intelFPGA_lite/16.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I /home/sebastian95/intelFPGA_lite/16.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I /home/sebastian95/intelFPGA_lite/16.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- /home/sebastian95/intelFPGA_lite/16.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.epl --name=onchipAlarm_nios2_gen2_0_cpu --dir=/tmp/alt7452_5811065295402166758.dir/0010_cpu_gen/ --quartus_bindir=/home/sebastian95/intelFPGA_lite/16.1/quartus/linux64/ --verilog --config=/tmp/alt7452_5811065295402166758.dir/0010_cpu_gen//onchipAlarm_nios2_gen2_0_cpu_processor_configuration.pl  --do_build_sim=0  ]
+Info: cpu: # 2017.10.13 08:59:10 (*) Starting Nios II generation
+Info: cpu: # 2017.10.13 08:59:10 (*)   Checking for plaintext license.
+Info: cpu: # 2017.10.13 08:59:16 (*)   Plaintext license not found.
+Info: cpu: # 2017.10.13 08:59:16 (*)   No license required to generate encrypted Nios II/e.
+Info: cpu: # 2017.10.13 08:59:16 (*)   Elaborating CPU configuration settings
+Info: cpu: # 2017.10.13 08:59:16 (*)   Creating all objects for CPU
+Info: cpu: # 2017.10.13 08:59:18 (*)   Generating RTL from CPU objects
+Info: cpu: # 2017.10.13 08:59:18 (*)   Creating plain-text RTL
+Info: cpu: # 2017.10.13 08:59:18 (*) Done Nios II generation
 Info: cpu: Done RTL generation for module 'onchipAlarm_nios2_gen2_0_cpu'
 Info: cpu: "nios2_gen2_0" instantiated altera_nios2_gen2_unit "cpu"
 Info: nios2_gen2_0_data_master_translator: "mm_interconnect_0" instantiated altera_merlin_master_translator "nios2_gen2_0_data_master_translator"
@@ -103,6 +159,6 @@ Info: rsp_mux_001: "mm_interconnect_0" instantiated altera_merlin_multiplexer "r
 Info: Reusing file /home/sebastian95/Documents/GitHub/AlarmClockSoC/onchipAlarm/synthesis/submodules/altera_merlin_arbitrator.sv
 Info: avalon_st_adapter: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter"
 Info: error_adapter_0: "avalon_st_adapter" instantiated error_adapter "error_adapter_0"
-Info: onchipAlarm: Done "onchipAlarm" with 28 modules, 41 files
+Info: onchipAlarm: Done "onchipAlarm" with 31 modules, 44 files
 Info: qsys-generate succeeded.
 Info: Finished: Create HDL design files for synthesis
